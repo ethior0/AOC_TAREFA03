@@ -1,10 +1,11 @@
 .data
 	msg1:.asciiz"\nInsira o valor da compra: (entre R$ 1000 e R$ 9999) "
 	msg2:.asciiz"\nInsira o valor da parcela: (entre R$ 100 e R$ 500) "
-	msg1_invalido:.asciiz"\nValor inv·lido de compra!"
-	msg2_invalido:.asciiz"\nValor inv·lido de parcela!"
+	msg1_invalido:.asciiz"\nValor inv√°lido de compra!"
+	msg2_invalido:.asciiz"\nValor inv√°lido de parcela!"
 	res:.asciiz"\nQuantidade de parcelas: "
 .text
+
 main:
 	# Leitura do valor no t0
 	li $v0, 4
@@ -30,7 +31,7 @@ main:
 	bgt $t1, 500, parcela_invalida
 	blt $t1, 100, parcela_invalida
 	
-	# C·lculo do resultado no t2
+	# C√°lculo do resultado no t2
 	div $t2, $t0, $t1
 	mul $t3, $t2, $t1
 	sub $t4, $t0, $t3
@@ -64,7 +65,3 @@ fim:
 
 	li $v0, 10
 	syscall
-	
-	
-	
-	
