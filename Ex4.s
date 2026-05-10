@@ -1,9 +1,10 @@
 .data
-	msg:.asciiz"\nInsira o salário atual: "
-	res:.asciiz"\nNovo salário: R$ "
+	msg:.asciiz"\nInsira o salÃ¡rio atual: "
+	res:.asciiz"\nNovo salÃ¡rio: R$ "
 .text
+
 main:
-	# Leitura do salário atual no t0
+	# Leitura do salÃ¡rio atual no t0
 	li $v0, 4
 	la $a0, msg
 	syscall
@@ -12,7 +13,7 @@ main:
 	syscall
 	add $t0, $v0, $zero
 	
-	#  Cálculo no t1
+	#  CÃ¡lculo no t1
 	mul $t1, $t0, 125
 	div $t1, $t1, 100
 	
