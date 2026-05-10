@@ -1,10 +1,11 @@
 .data
-	msg1:.asciiz"\nInsira o número inteiro: "
+	msg1:.asciiz"\nInsira o nÃºmero inteiro: "
 	cen:.asciiz"\nCentena = "
 	dez:.asciiz"\nDezena = "
 	uni:.asciiz"\nUnidade = "
 	erro:.asciiz"\nFora do intervalo! (100-999)"
 .text
+
 main:
 	# Leitura do valor no t0
 	li $v0, 4
@@ -18,7 +19,7 @@ main:
 	bgt $t0, 999, invalido
 	blt $t0, 100, invalido
 	
-	# Cálculos no t1, t2 e t3
+	# CÃ¡lculos no t1, t2 e t3
 	div $t1, $t0, 100
 	rem $t2, $t0, 100
 	rem $t3, $t2, 10
