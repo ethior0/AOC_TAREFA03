@@ -2,10 +2,11 @@
 	msg1:.asciiz"\nInsira o valor de A: "
 	msg2:.asciiz"\nInsira o valor de B: "
 	msg3:.asciiz"\nInsira o valor de C: "
-	maior:.asciiz"\nDuas raízes reais!"
-	igual:.asciiz"\nUma raíz real!"
-	menor:.asciiz"\nNão existem raízes reais!"
+	maior:.asciiz"\nDuas raÃ­zes reais!"
+	igual:.asciiz"\nUma raÃ­z real!"
+	menor:.asciiz"\nNÃ£o existem raÃ­zes reais!"
 .text
+
 main:
 	# Leitura do A no t0
 	li $v0, 4
@@ -34,7 +35,7 @@ main:
 	syscall
 	add $t2, $v0, $zero
 	
-	# Cálculo do delta no t3
+	# CÃ¡lculo do delta no t3
 	mul $t3, $t1, $t1
 	mul $t4, $t0, $t2
 	mul $t4, $t4, 4
@@ -62,6 +63,3 @@ mostra_menor:
 fim:
 	li $v0, 10
 	syscall
-	
-	
-	
