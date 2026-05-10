@@ -1,10 +1,11 @@
 .data
-	msg1:.asciiz"\nInsira o 1o número: "
-	msg2:.asciiz"\nInsira o 2o número: "
-	igual:.asciiz"\nNúmeros iguais!"
-	maior:.asciiz"\nNúmero maior: "
-	menor:.asciiz"\nNúmero menor: "
+	msg1:.asciiz"\nInsira o 1o nÃºmero: "
+	msg2:.asciiz"\nInsira o 2o nÃºmero: "
+	igual:.asciiz"\nNÃºmeros iguais!"
+	maior:.asciiz"\nNÃºmero maior: "
+	menor:.asciiz"\nNÃºmero menor: "
 .text
+
 main:
 	# Leitura do 1o valor no t0
 	li $v0, 4
@@ -26,7 +27,7 @@ main:
 	
 	beq $t0, $t1, mostra_igual
 	
-	# Condição pro menor no t2 e maior no t3
+	# CondiÃ§Ã£o pro menor no t2 e maior no t3
 	bgt $t0, $t1, se	
 	j senao
 
